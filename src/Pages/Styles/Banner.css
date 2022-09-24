@@ -1,0 +1,65 @@
+.Banner-container {
+  width: 100%;
+  height: 100%;
+  background: url("../../Asset/Banner/Bannerback.png");
+  background-repeat: no-repeat;
+}
+
+.image-shape {
+  position: relative;
+}
+
+.image-place {
+  bottom: -15%;
+  right: 0;
+  position: absolute;
+}
+
+.banner-heading h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 6.2rem;
+  color: #075FE4;
+}
+
+.banner-heading h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 6.9rem;
+  line-height: 8.8rem;
+  color: #FFFFFF;
+}
+
+.banner-heading h4 {
+  margin-top: 1.4rem;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 5.6rem;
+  color: #D7E5FB;
+}
+
+.resume-button {
+  margin: 3.5rem 0;
+  border: 0;
+  outline: 0;
+  padding: 2.8rem 6.5rem;
+  background: #075FE4;
+  border-radius: 1rem;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #FFFFFF;
+}
+
+.download-icon {
+  font-size: 1.7rem;
+  font-weight: 700 !important;
+  margin-right: 1rem;
+}

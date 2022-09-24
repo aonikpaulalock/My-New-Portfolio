@@ -1,0 +1,36 @@
+.nav-bg {
+  background-color: var(--Frist-Background-Color);
+  padding: 2.3rem .5rem !important;
+}
+
+.nav-anchor {
+  font-family: 'Inter';
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 1.4rem !important;
+  line-height: 1.7rem !important;
+  color: #BCB8D0 !important;
+  padding: 1.1rem 2.2rem;
+  text-decoration: none !important;
+}
+
+.active {
+  width: 100%;
+  height: 100%;
+  background: #2D343F;
+  border-radius: .5rem;
+}
+
+.Contact-header-button {
+  border: 0;
+  outline: 0;
+  padding: 1.6rem 3.2rem;
+  background: #2D343F;
+  border-radius: .5rem;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #FFFFFF;
+}
