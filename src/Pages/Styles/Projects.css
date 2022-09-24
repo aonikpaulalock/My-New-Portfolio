@@ -1,13 +1,13 @@
 .projects-container {
   background: #22282F;
-  padding: 6rem;
+  padding: 10rem 0 ;
 }
 
 .project-1 {
   background: #2D343F;
   border-radius: 30px;
-  height: 640px;
 }
+
 .card-container {
   padding: 4rem;
 }
@@ -17,8 +17,19 @@
   font-style: normal;
   font-weight: 700;
   font-size: 3.6rem;
-  line-height: 4.7rem;
+  line-height: 4.9rem;
   color: #FFFFFF;
+  padding: 3rem 1.5rem;
+}
+
+.preview {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-decoration-line: underline  !important;
+  color: #88B2F2  !important;
   padding: 1.5rem;
 }
 
@@ -34,15 +45,15 @@
 }
 
 .button-clientServer {
-  border: 0;
-  outline: 0;
+  cursor: pointer;
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.4rem;
-  color: #1B1F24;
-  padding: .8rem 1.6rem;
+  color: #1B1F24 !important;
+  padding: .8rem 1.8rem;
   background: #B0CCF6;
   border-radius: 10px;
+  text-decoration: none;
 }

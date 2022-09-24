@@ -94,7 +94,7 @@
   font-weight: 600;
   font-size: 3.2rem;
   line-height: 4.4rem;
-  color: #FFFFFF;
+  color: #D7E5FB;
   padding: 2.1rem 0 .3rem 0;
 }
 
@@ -107,11 +107,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 3rem;
+  width: 6rem;
   height: .6rem;
-  border-radius: 10px;
-  background-color: #075FE4;
-  
+  background: #D7E5FB;
+  border-radius: .2rem;
 }
 
 .marquee {
