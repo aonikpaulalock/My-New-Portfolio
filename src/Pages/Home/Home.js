@@ -4,6 +4,7 @@ import About from './About';
 import Banner from './Banner';
 import Blogs from './Blogs';
 import Contact from './Contact';
+import Footer from './Footer';
 import Projects from './Projects';
 import Services from './Services';
 import Skills from './Skills';
@@ -19,6 +20,7 @@ const Home = () => {
       <Services/>
       <Blogs/>
       <Contact/>
+      <Footer/>
     </>
   );
 };

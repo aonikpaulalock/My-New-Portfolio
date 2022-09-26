@@ -1,0 +1,92 @@
+.footer-container {
+  background: #22282F;
+  padding: 5rem;
+}
+
+.degisnation h1 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 4.7rem;
+  color: #88B2F2;
+  margin-bottom: 0;
+}
+
+.degisnation h3 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 3rem;
+  color: #D7E5FB;
+}
+
+.get-in-touch h3 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 4.7rem;
+  color: #FFFFFF;
+  margin-bottom: 4.2rem;
+}
+
+.get-in-touch h4 {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  color: #B0CCF6;
+  text-transform: uppercase;
+}
+
+.get-in-touch p {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #FFFFFF;
+  border-bottom: 1px solid #B0CCF6;
+  margin-bottom: 0;
+  padding-bottom: .4rem;
+}
+
+.facebook-contain,
+.twitter-contain,
+.linkedin-contain,
+.insta-contain {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2D343F;
+  position: relative;
+  cursor: pointer;
+}
+
+.facebook-icon,
+.twitter-icon,
+.linkedin-icon,
+.insta-icon {
+  font-size: 1.8rem;
+  color: #B0CCF6;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+}
+.horizantal-line {
+  border: 1px solid  #2D343F;
+  margin: 3rem;
+}
+.copyright {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  text-transform: uppercase;
+  color: #5D6C83;
+  text-align: center;
+}

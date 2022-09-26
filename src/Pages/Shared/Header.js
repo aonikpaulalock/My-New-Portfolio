@@ -25,7 +25,7 @@ const Header = () => {
             <NavLink className="nav-anchor" to="/blogs">Blogs</NavLink>
           </Nav>
           <div>
-            <button className="Contact-header-button">Book Class</button>
+            <button className="Contact-header-button">Contact</button>
           </div>
         </Navbar.Collapse>
       </Container>

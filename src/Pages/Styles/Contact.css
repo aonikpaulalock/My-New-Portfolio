@@ -1,4 +1,40 @@
 .contact-container {
   background: #1B1F24;
-  padding:13rem 3rem
+  padding: 13rem 3rem ;
+}
+
+.input-feild {
+  background: #2D343F;
+  border-radius: 10px;
+  width: 90%;
+  padding: 2.8rem 2.5rem;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  border: none;
+  color: #FFFFFF;
+}
+
+.input-feild:focus {
+  outline: none;
+}
+
+.link-button {
+  margin-top: 4.3rem;
+  border: 0;
+  outline: 0;
+  padding: 2.6rem 6.7rem !important;
+  background-color: var(--Primary-Color);
+  border-radius: 1rem;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 3rem;
+  color: #FFFFFF;
+}
+.arrow-icon {
+  margin-left: .4rem;
+  font-size: 2.3rem;
 }
