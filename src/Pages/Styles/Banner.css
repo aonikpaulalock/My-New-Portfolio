@@ -1,8 +1,8 @@
 .Banner-container {
-  width: 100%;
-  height: 100%;
+  height: fit-content;
   background: url("../../Asset/Banner/Bannerback.png");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .image-shape {
@@ -58,6 +58,7 @@
   color: #FFFFFF !important;
   text-decoration: none;
 }
+
 .link-work {
   text-decoration: none;
   color: #FFFFFF !important;
@@ -68,4 +69,14 @@
   font-weight: 700 !important;
   margin-right: 1rem;
   color: #FFFFFF
+}
+
+
+@media screen and (max-width:994px) {
+  .image-place {
+    bottom: 0;
+    right: 0;
+    position: relative;
+  }
+
 }

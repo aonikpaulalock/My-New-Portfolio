@@ -58,18 +58,21 @@
   color: #FFFFFF;
   padding: 2.8rem 0 1rem 0;
 }
+
 .services-sub-heading {
   font-family: 'Space Grotesk';
   font-style: normal;
   font-weight: 600;
   font-size: 2rem;
-  line-height: 3rem; 
+  line-height: 3rem;
   color: #D7E5FB;
   margin-bottom: 3rem;
 }
+
 .services-after {
   position: relative;
 }
+
 .after-after::after {
   position: absolute;
   top: 43%;
@@ -79,4 +82,13 @@
   height: .6rem;
   background-color: #075FE4;
 }
-  
+
+@media screen and (max-width:994px) {
+  /* .services-card-1 {
+    margin-bottom: 10rem;
+  } */
+
+  .services-card-3 {
+    margin-top: 2rem;
+  }
+}

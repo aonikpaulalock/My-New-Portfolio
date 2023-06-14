@@ -4,7 +4,6 @@ import image from "../../Asset/Banner/bannerImg.png"
 import shape from "../../Asset/Banner/Vector 1.png"
 import Typed from 'react-typed';
 import { Icon } from '@iconify/react';
-import { Link } from 'react-router-dom';
 const resume = 'https://drive.google.com/file/d/1Ls0I5jjYrqvZzedKyhrjwXuJufnigOa5/view?usp=sharing'
 const Banner = () => {
   return (
@@ -16,7 +15,7 @@ const Banner = () => {
               <h3>Hello I Am</h3>
               <div className="image-shape">
                 <h1>Aonik Paul Alock</h1>
-                <img src={shape} alt="" className="image-place" />
+                <img src={shape} alt="" className="img-fluid" />
               </div>
               <Typed
                 strings={[

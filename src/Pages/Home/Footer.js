@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="footer-container">
       <div className="container">
         <div className="row">
-          <div className="col-md-6 d-flex justify-content-center align-items-center">
+          <div className="col-lg-6 col-md-7 col-12 d-flex justify-content-center align-items-center">
             <div className="d-flex align-items-center">
               <img src={image} alt="" />
               <div className="degisnation ms-5">
@@ -16,7 +16,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 d-flex justify-content-center align-items-center">
+          <div className="mt-sm-5 mt-0 col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center">
             <div className="get-in-touch">
               <h3>Get in touch</h3>
               <div className="d-flex align-items-lg-center">

@@ -55,3 +55,10 @@
   color: #88B2F2;
   padding: 1rem 0;
 }
+
+@media (max-width:699px) {
+  .About-container {
+    padding: 6rem;
+    background-size: contain;
+  }
+}
