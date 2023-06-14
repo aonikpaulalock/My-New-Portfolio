@@ -34,7 +34,20 @@
   line-height: 3rem;
   color: #FFFFFF;
 }
+.link-button:hover {
+  background-color: #075fe4d8;
+}
 .arrow-icon {
   margin-left: .4rem;
   font-size: 2.3rem;
+}
+
+@media screen and (max-width:600px) {
+  .contact-container {
+    background: #1B1F24;
+    padding: 10rem 4rem ;
+  }
+  .input-feild {
+    width: 100%;;
+  }
 }

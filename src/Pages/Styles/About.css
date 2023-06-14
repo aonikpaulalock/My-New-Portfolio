@@ -56,9 +56,15 @@
   padding: 1rem 0;
 }
 
-@media (max-width:699px) {
+@media screen and (max-width:600px) {
+  .about-heading {
+    margin: 3rem 0;
+    padding: 0 4rem;
+  }
   .About-container {
-    padding: 6rem;
-    background-size: contain;
+    padding: 4rem 0 6rem 0;
+  }
+  .about-pera {
+    margin: 5rem 0rem;
   }
 }

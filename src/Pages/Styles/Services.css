@@ -31,21 +31,17 @@
 }
 
 .services-image {
-  position: relative;
   width: 100px;
   height: 100px;
   background: #075FE4;
   border-radius: 50%;
-}
-
-.coder-icon {
-  position: absolute;
-  color: white;
-  top: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+}
+
+.coder-icon {
+  color: white;
   font-size: 5rem;
 }
 
@@ -84,11 +80,15 @@
 }
 
 @media screen and (max-width:994px) {
-  /* .services-card-1 {
-    margin-bottom: 10rem;
-  } */
-
   .services-card-3 {
     margin-top: 2rem;
   }
+}
+@media screen and (max-width:600px) {
+  .services-container {
+    padding: 10rem 4rem;
+}
+.services-card-1 {
+  margin-top: 8rem;
+}
 }

@@ -1,20 +1,9 @@
 .Banner-container {
   height: fit-content;
-  background: url("../../Asset/Banner/Bannerback.png");
+  background: url("../../Asset/Banner/Background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.image-shape {
-  position: relative;
-}
-
-.image-place {
-  bottom: -15%;
-  right: 0;
-  position: absolute;
-}
-
 .banner-heading h3 {
   font-family: 'Space Grotesk', sans-serif;
   font-style: normal;
@@ -58,7 +47,9 @@
   color: #FFFFFF !important;
   text-decoration: none;
 }
-
+.resume-button:hover {
+  background-color: #075fe4d8;
+}
 .link-work {
   text-decoration: none;
   color: #FFFFFF !important;
@@ -72,11 +63,3 @@
 }
 
 
-@media screen and (max-width:994px) {
-  .image-place {
-    bottom: 0;
-    right: 0;
-    position: relative;
-  }
-
-}

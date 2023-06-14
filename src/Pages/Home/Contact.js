@@ -17,7 +17,7 @@ const Contact = () => {
     <div className="contact-container">
       <div className="container">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 mb-sm-0 mb-5">
             <div>
               <div className="after-line skills-line">
                 <h4 className="about-main-head">CONTACT ME</h4>

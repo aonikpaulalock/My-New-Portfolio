@@ -23,3 +23,19 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+@media screen and (max-width:994px) {
+  body,
+  html {
+    font-size: 51.5%;
+  }
+  
+}
+@media screen and (max-width:530px) {
+  body,
+  html {
+    font-size: 41%;
+  }
+  
+}

@@ -21,7 +21,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="col-lg-12">
-                <div className="project-1 mb-sm-5 mb-0">
+                <div className="project-1 mb-sm-5 mb-5">
                   <div className="card-container">
                     <div className="button-container">
                       <a

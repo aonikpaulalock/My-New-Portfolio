@@ -4,13 +4,13 @@ import image from "../../Asset/Banner/bannerImg.png"
 import shape from "../../Asset/Banner/Vector 1.png"
 import Typed from 'react-typed';
 import { Icon } from '@iconify/react';
-const resume = 'https://drive.google.com/file/d/1Ls0I5jjYrqvZzedKyhrjwXuJufnigOa5/view?usp=sharing'
+const resume = 'https://drive.google.com/file/d/1ty1latVmhPTc7Th3YLleBTlJLaChRwjY/view?usp=sharing'
 const Banner = () => {
   return (
     <div className="Banner-container">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 d-flex justify-content-center align-items-center">
+          <div className="col-md-6 col-12 d-flex justify-content-center align-items-center p-sm-0 p-5">
             <div className="banner-heading mt-5 pt-5">
               <h3>Hello I Am</h3>
               <div className="image-shape">
@@ -22,7 +22,7 @@ const Banner = () => {
                   'Junior Frontend Developer',
                   'React Developer',
                   'Javascript Developer',
-                  'Junior Full Stack Developer',
+                  'Full Stack Developer',
                   'MERN Stack Developer'
                 ]}
                 typeSpeed={60}
@@ -32,17 +32,19 @@ const Banner = () => {
               />
 
               <button className="resume-button d-flex justify-align-content-center align-items-center">
-              <a
-                href={resume}
-                target="_blank"
-                rel="noreferrer"
-                className="link-work">
-                <Icon icon="bi:download" className="download-icon" />Download Resume</a> 
-               </button>
+                <a
+                  href={resume}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-work">
+                  <Icon icon="bi:download" className="download-icon" />Download Resume</a>
+              </button>
             </div>
           </div>
-          <div className="col-lg-6 d-flex justify-content-center align-items-center">
-            <img src={image} alt="" className="img-fluid" />
+          <div className="col-md-6 col-12 d-flex justify-content-center align-items-center">
+            <div className="img-setup">
+              <img src={image} alt="" className="img-fluid" />
+            </div>
           </div>
         </div>
       </div>

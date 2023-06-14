@@ -57,3 +57,13 @@
   border-radius: 10px;
   text-decoration: none;
 }
+.button-clientServer:hover {
+  background: #a6c6f5ee;
+}
+
+@media screen and (max-width:560px) {
+  .projects-container {
+    background: #22282F;
+    padding: 10rem 4rem ;
+  }
+}

@@ -1,6 +1,6 @@
 .footer-container {
   background: #22282F;
-  padding: 5rem;
+  padding: 5rem 5rem 2.5rem 5rem;
 }
 
 .degisnation h1 {
@@ -62,8 +62,16 @@
   height: 40px;
   border-radius: 50%;
   background-color: #2D343F;
-  position: relative;
-  cursor: pointer;
+  cursor: pointer; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+.facebook-contain:hover,
+.twitter-contain:hover,
+.linkedin-contain:hover,
+.insta-contain:hover {
+  background-color: #333b47;
 }
 
 .facebook-icon,
@@ -72,9 +80,6 @@
 .insta-icon {
   font-size: 1.8rem;
   color: #B0CCF6;
-  position: absolute;
-  top: 25%;
-  left: 30%;
 }
 .horizantal-line {
   border: 1px solid  #2D343F;
@@ -89,4 +94,11 @@
   text-transform: uppercase;
   color: #5D6C83;
   text-align: center;
+}
+
+@media screen and (max-width:600px) {
+  .footer-container {
+    background: #22282F;
+    padding: 5rem 4rem;
+  }
 }

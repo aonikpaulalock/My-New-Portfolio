@@ -34,3 +34,6 @@
   line-height: 2.4rem;
   color: #FFFFFF;
 }
+.Contact-header-button:hover {
+  background: #2d343fd2;
+}
