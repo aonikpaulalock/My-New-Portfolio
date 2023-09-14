@@ -3,7 +3,7 @@ import "../../Pages/Styles/Services.css"
 import { Icon } from '@iconify/react';
 const Services = () => {
   return (
-    <div className="services-container">
+    <div className="services-container" id="services">
       <div className="container">
         <div className="col-md-6">
           <div className="after-line skills-line">

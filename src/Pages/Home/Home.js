@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../Shared/Header';
 import About from './About';
 import Banner from './Banner';
 import Blogs from './Blogs';
@@ -11,8 +10,7 @@ import Skills from './Skills';
 
 const Home = () => {
   return (
-    <>
-      <Header/>
+    <div id="#home">
       <Banner/>
       <About/>
       <Skills/>
@@ -21,7 +19,7 @@ const Home = () => {
       <Blogs/>
       <Contact/>
       <Footer/>
-    </>
+    </div>
   );
 };
 

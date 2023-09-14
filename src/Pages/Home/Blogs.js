@@ -3,7 +3,7 @@ import "../../Pages/Styles/Blogs.css"
 import image from "../../Asset/Blogs/blogs.png"
 const Blogs = () => {
   return (
-    <div className="Blogs-container">
+    <div className="Blogs-container" id="blogs">
       <div className="container">
         <div className="row">
           <div className="col-md-6 d-flex justify-content-center align-items-center">

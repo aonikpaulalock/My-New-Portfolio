@@ -14,7 +14,7 @@ const Contact = () => {
       .catch(err => console.log(err))
   }
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="contact">
       <div className="container">
         <div className="row">
           <div className="col-md-6 mb-sm-0 mb-5">

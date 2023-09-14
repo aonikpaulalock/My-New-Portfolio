@@ -3,7 +3,7 @@ import "../../Pages/Styles/About.css"
 import Typed from 'react-typed';
 const About = () => {
   return (
-    <div className="About-container">
+    <div className="About-container" id="about">
       <div className="container py-5">
         <div className="row">
           <div className="col-lg-10">

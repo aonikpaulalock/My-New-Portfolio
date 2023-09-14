@@ -4,10 +4,12 @@ import image from "../../Asset/Banner/bannerImg.png"
 import shape from "../../Asset/Banner/Vector 1.png"
 import Typed from 'react-typed';
 import { Icon } from '@iconify/react';
-const resume = 'https://drive.google.com/file/d/1ty1latVmhPTc7Th3YLleBTlJLaChRwjY/view?usp=sharing'
+import Header from '../Shared/Header';
+const resume = 'https://drive.google.com/file/d/1ES25Xv0NS2I-TD5EoJyOKYPVCTopNsIe/view?usp=sharing'
 const Banner = () => {
   return (
     <div className="Banner-container">
+        <Header/>
       <div className="container">
         <div className="row">
           <div className="col-md-6 col-12 d-flex justify-content-center align-items-center p-sm-0 p-5">

@@ -11,7 +11,7 @@ const Skills = () => {
       })
   }, [])
   return (
-    <div className="skills-container">
+    <div className="skills-container" id="skills">
       <div className="container mt-5">
         <div className="after-line skills-line">
           <h4 className="about-main-head">MY SKILLS</h4>
@@ -37,7 +37,7 @@ const Skills = () => {
                     <h3>
                       {skill.skill}
                     </h3>
-                    <h1 className="skill-rate"></h1>
+                    <h1 className="skill-rate"> </h1>
                   </div>
                 ))}
               </Marquee>

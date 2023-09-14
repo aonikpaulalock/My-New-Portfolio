@@ -1,15 +1,15 @@
 import React from 'react';
+import { NavHashLink } from 'react-router-hash-link';
 import { Nav, Navbar, Container } from 'react-bootstrap';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Logo from "../../Asset/Banner/logo.png"
 import "../Styles/Header.css"
 const Header = () => {
-  const navigate = useNavigate()
   return (
-    <Navbar expand="lg" className="nav-bg">
+    <Navbar expand="md" className="nav-bg">
       <Container>
         <Navbar.Brand as={Link} to="/" className="img-fluid">
-           <img src={Logo} alt="" />
+          <img src={Logo} alt="" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" className="bg-white" />
         <Navbar.Collapse id="navbarScroll">
@@ -18,14 +18,14 @@ const Header = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <NavLink className="nav-anchor" to="/">Home</NavLink>
-            <NavLink className="nav-anchor" to="/aboutpage">About</NavLink>
-            <NavLink className="nav-anchor" to="/servicePages">Skills</NavLink>
-            <NavLink className="nav-anchor" to="/contactPage">Projects</NavLink>
-            <NavLink className="nav-anchor" to="/blogs">Blogs</NavLink>
+            <NavHashLink className="nav-anchor" smooth="true" to="/#home">Home</NavHashLink>
+            <NavHashLink className="nav-anchor" smooth="true" to="/#about">About</NavHashLink>
+            <NavHashLink className="nav-anchor" smooth="true" to="/#skills">Skills</NavHashLink>
+            <NavHashLink className="nav-anchor" smooth="true" to="/#project">Projects</NavHashLink>
+            <NavHashLink className="nav-anchor" smooth="true" to="/#blogs">Blogs</NavHashLink>
           </Nav>
           <div>
-            <button className="Contact-header-button">Contact</button>
+            <NavHashLink className="Contact-header-button"  smooth="true" to="/#contact">Contact</NavHashLink>
           </div>
         </Navbar.Collapse>
       </Container>
