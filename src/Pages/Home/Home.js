@@ -10,15 +10,16 @@ import Skills from './Skills';
 
 const Home = () => {
   return (
-    <div id="#home">
-      <Banner/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      <Services/>
-      <Blogs/>
-      <Contact/>
-      <Footer/>
+    <div id="#home"
+    >
+      <Banner />
+      <About />
+      <Skills />
+      <Projects />
+      <Services />
+      <Blogs />
+      <Contact />
+      <Footer />
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 const Contact = () => {
   const handleSendEmail = (e) => {
     e.preventDefault()
-    emailjs.sendForm("service_10c9v08", "template_polt98h", e.target, "HJfOjeb-zdU-nbl5y")
+    emailjs.sendForm("service_apb1mk7", "template_polt98h", e.target, "HJfOjeb-zdU-nbl5y")
       .then(res => {
         toast.success("Your contact massage sent successfully")
         e.target.reset()
@@ -15,14 +15,20 @@ const Contact = () => {
   }
   return (
     <div className="contact-container" id="contact">
-      <div className="container">
+      <div className="container"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-duration="3000"
+        data-aos-easing="ease-in-out"
+        data-aos-delay="300"
+      >
         <div className="row">
           <div className="col-md-6 mb-sm-0 mb-5">
             <div>
               <div className="after-line skills-line">
                 <h4 className="about-main-head">CONTACT ME</h4>
               </div>
-              <h3 className="skills-main-heading py-4">Interested in working together ? 
+              <h3 className="skills-main-heading py-4">Interested in working together ?
                 Let's talk </h3>
             </div>
           </div>

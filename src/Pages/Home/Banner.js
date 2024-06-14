@@ -8,11 +8,20 @@ import Header from '../Shared/Header';
 const resume = 'https://drive.google.com/file/d/1ES25Xv0NS2I-TD5EoJyOKYPVCTopNsIe/view?usp=sharing'
 const Banner = () => {
   return (
-    <div className="Banner-container">
-        <Header/>
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6 col-12 d-flex justify-content-center align-items-center p-sm-0 p-5">
+    <div
+      className="Banner-container"
+    >
+      <Header />
+      <div
+        className="container"
+      >
+        <div div className="row" >
+          <div
+            data-aos="fade-left"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+
+            className="col-md-6 col-12 d-flex justify-content-center align-items-center p-sm-0 p-5">
             <div className="banner-heading mt-5 pt-5">
               <h3>Hello I Am</h3>
               <div className="image-shape">
@@ -43,14 +52,18 @@ const Banner = () => {
               </button>
             </div>
           </div>
-          <div className="col-md-6 col-12 d-flex justify-content-center align-items-center">
+          <div
+            data-aos="fade-right"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="1500"
+            className="col-md-6 col-12 d-flex justify-content-center align-items-center">
             <div className="img-setup">
               <img src={image} alt="" className="img-fluid" />
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </div >
+      </div >
+    </div >
   );
 };
 

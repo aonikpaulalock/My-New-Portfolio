@@ -28,6 +28,28 @@
   line-height: 2.4rem;
   color: #FFFFFF !important;
 }
+
 .Contact-header-button:hover {
   background: #2d343fd2;
+}
+
+.active-link {
+  color: #075FE4;
+  font-weight: bold;
+  background: linear-gradient(to right, #88B2F2, #075FE4);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background-color: #075FE4;
 }

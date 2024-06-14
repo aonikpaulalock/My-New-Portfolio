@@ -71,18 +71,15 @@
   transition: 300ms ease-in-out;
   margin: 2rem;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .skill--box:hover {
   transform: scale(1.1);
 }
-
-/* 
-.skils-image {
-  width: 100px !important;
-  height: 100px !important;
-  border-radius: 50% !important;
-} */
 
 .skill--box>img {
   pointer-events: none;
@@ -100,6 +97,7 @@
 
 .skill-rate {
   position: relative;
+  text-align: center;
 }
 
 .skill-rate::after {
@@ -107,15 +105,20 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 6rem;
-  height: .6rem;
-  background: #D7E5FB;
-  border-radius: .2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: linear-gradient(to right, #88B2F2, #075FE4);
+  border-radius: 1.5rem;
+}
+
+.title-skills {
+  text-align: center;
 }
 
 .marquee {
   padding: 2.7rem 0;
 }
+
 @media screen and (max-width:600px) {
   .skills-container {
     padding: 4rem;

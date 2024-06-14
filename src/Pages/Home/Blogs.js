@@ -4,7 +4,11 @@ import image from "../../Asset/Blogs/blogs.png"
 const Blogs = () => {
   return (
     <div className="Blogs-container" id="blogs">
-      <div className="container">
+      <div className="container"
+      data-aos="zoom-in"
+      data-aos-easing="linear"
+      data-aos-duration="2500"
+      >
         <div className="row">
           <div className="col-md-6 d-flex justify-content-center align-items-center">
             <div>

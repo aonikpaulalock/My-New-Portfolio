@@ -4,7 +4,11 @@ import Typed from 'react-typed';
 const About = () => {
   return (
     <div className="About-container" id="about">
-      <div className="container py-5">
+      <div className="container py-5"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
         <div className="row">
           <div className="col-lg-10">
             <div className="about-heading">

@@ -14,7 +14,11 @@ const Projects = () => {
           <div className="col-lg-6">
             <div className="row gap-5">
               <div className="col-lg-12">
-                <div className="skills-heding">
+                <div className="skills-heding"
+                  data-aos="fade-up"
+                  data-aos-easing="linear"
+                  data-aos-duration="2500"
+                >
                   <div className="after-line skills-line">
                     <h4 className="about-main-head">MY PORTFOLIO</h4>
                   </div>
@@ -22,7 +26,12 @@ const Projects = () => {
                 </div>
               </div>
               <div className="col-lg-12">
-                <div className="project-1 mb-sm-5 mb-5">
+                <div className="project-1 mb-sm-5 mb-5"
+                  data-aos="fade-right"
+                  data-aos-offset="300"
+                  data-aos-easing="linear"
+                  data-aos-duration="1000"
+                >
                   <div className="card-container">
                     <div className="button-container">
                       <a
@@ -59,7 +68,12 @@ const Projects = () => {
                 </div>
               </div>
               <div className="col-lg-12">
-                <div className="project-1 mb-sm-5 mb-5">
+                <div className="project-1 mb-sm-5 mb-5"
+                  data-aos="fade-right"
+                  data-aos-offset="300"
+                  data-aos-easing="linear"
+                  data-aos-duration="3000"
+                >
                   <div className="card-container">
                     <div className="button-container">
                       <a
@@ -100,7 +114,12 @@ const Projects = () => {
           <div className="col-lg-6">
             <div className="row gap-5">
               <div className="col-lg-12">
-                <div className="project-1">
+                <div className="project-1"
+                  data-aos="fade-left"
+                  data-aos-offset="300"
+                  data-aos-easing="linear"
+                  data-aos-duration="1000"
+                >
                   <div className="card-container">
                     <div className="button-container">
                       <a
@@ -137,7 +156,12 @@ const Projects = () => {
                 </div>
               </div>
               <div className="col-lg-12">
-                <div className="project-1">
+                <div className="project-1"
+                  data-aos="fade-left"
+                  data-aos-offset="300"
+                  data-aos-easing="linear"
+                  data-aos-duration="3000"
+                >
                   <div className="card-container">
                     <div className="button-container">
                       <a

@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavHashLink } from 'react-router-hash-link';
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Logo from "../../Asset/Banner/logo.png"
 import "../Styles/Header.css"
 const Header = () => {
+  const [activeLink, setActiveLink] = useState('/#home');
+
+  const handleSetActive = (link) => {
+    setActiveLink(link);
+  };
   return (
     <Navbar expand="md" className="nav-bg">
       <Container>
@@ -18,14 +23,55 @@ const Header = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <NavHashLink className="nav-anchor" smooth="true" to="/#home">Home</NavHashLink>
-            <NavHashLink className="nav-anchor" smooth="true" to="/#about">About</NavHashLink>
-            <NavHashLink className="nav-anchor" smooth="true" to="/#skills">Skills</NavHashLink>
-            <NavHashLink className="nav-anchor" smooth="true" to="/#project">Projects</NavHashLink>
-            <NavHashLink className="nav-anchor" smooth="true" to="/#blogs">Blogs</NavHashLink>
+            <NavHashLink
+              className={`nav-anchor ${activeLink === '/#home' ? 'active-link' : ''}`}
+              smooth="true"
+              to="/#home"
+              onClick={() => handleSetActive('/#home')}
+            >
+              Home
+            </NavHashLink>
+            <NavHashLink
+              className={`nav-anchor ${activeLink === '/#about' ? 'active-link' : ''}`}
+              smooth="true"
+              to="/#about"
+              onClick={() => handleSetActive('/#about')}
+            >
+              About
+            </NavHashLink>
+            <NavHashLink
+              className={`nav-anchor ${activeLink === '/#skills' ? 'active-link' : ''}`}
+              smooth="true"
+              to="/#skills"
+              onClick={() => handleSetActive('/#skills')}
+            >
+              Skills
+            </NavHashLink>
+            <NavHashLink
+              className={`nav-anchor ${activeLink === '/#project' ? 'active-link' : ''}`}
+              smooth="true"
+              to="/#project"
+              onClick={() => handleSetActive('/#project')}
+            >
+              Projects
+            </NavHashLink>
+            <NavHashLink
+              className={`nav-anchor ${activeLink === '/#blogs' ? 'active-link' : ''}`}
+              smooth="true"
+              to="/#blogs"
+              onClick={() => handleSetActive('/#blogs')}
+            >
+              Blogs
+            </NavHashLink>
           </Nav>
           <div>
-            <NavHashLink className="Contact-header-button"  smooth="true" to="/#contact">Contact</NavHashLink>
+            <NavHashLink
+              className="Contact-header-button"
+              smooth="true"
+              to="/#contact"
+            >
+              Contact
+            </NavHashLink>
           </div>
         </Navbar.Collapse>
       </Container>
