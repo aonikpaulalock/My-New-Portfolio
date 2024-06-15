@@ -9,19 +9,32 @@ import Projects from './Pages/Home/Projects';
 import Contact from './Pages/Home/Contact';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Loading from './components/Loading';
 function App() {
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     AOS.init(
       {
-        offset: 200,  // offset (in px) from the original trigger point
-        delay: 0,     // delay (in ms) before the animation starts
-        duration: 1000, // duration (in ms) of the animation
-        easing: 'ease-in-out', // easing function applied to the animation
+        offset: 200,
+        delay: 0,
+        duration: 1000,
+        easing: 'ease-in-out',
         once: true,
       }
     );
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <>
       <Routes>
