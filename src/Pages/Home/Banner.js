@@ -5,7 +5,7 @@ import shape from "../../Asset/Banner/Vector 1.png"
 import Typed from 'react-typed';
 import { Icon } from '@iconify/react';
 import Header from '../Shared/Header';
-const resume = 'https://drive.google.com/file/d/1ES25Xv0NS2I-TD5EoJyOKYPVCTopNsIe/view?usp=sharing'
+const resumeUrl = 'https://drive.google.com/uc?export=download&id=16gF5wUT1y-0f1K1P3-tGTgJmCUiULBy1';
 const Banner = () => {
   return (
     <div
@@ -42,11 +42,11 @@ const Banner = () => {
                 loop
               />
 
-              <button className="resume-button d-flex justify-align-content-center align-items-center">
+              <button className="resume-button d-flex justify-align-content-center align-items-center"
+              >
                 <a
-                  href={resume}
-                  target="_blank"
-                  rel="noreferrer"
+                  href={resumeUrl}
+                  download="Aonik Paul Alock Resume.pdf"
                   className="link-work">
                   <Icon icon="bi:download" className="download-icon" />Download Resume</a>
               </button>
