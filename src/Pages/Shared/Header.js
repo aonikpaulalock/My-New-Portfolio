@@ -4,12 +4,23 @@ import { Nav, Navbar, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Logo from "../../Asset/Banner/logo.png"
 import "../Styles/Header.css"
+import { logout, selectCurrentUser } from '../../redux/features/auth/login/loginSlice';
+import { useSelector } from 'react-redux';
+import { useAppDispatch } from '../../redux/hooks';
+import { toast } from 'react-toastify';
 const Header = () => {
+  const user = useSelector(selectCurrentUser);
+  console.log(user)
+  const dispatch = useAppDispatch();
   const [activeLink, setActiveLink] = useState('/#home');
-
   const handleSetActive = (link) => {
     setActiveLink(link);
   };
+  const handleLogout = () => {
+    dispatch(logout());
+    toast.success("Logged out");
+  };
+
   return (
     <Navbar expand="md" className="nav-bg">
       <Container>
@@ -31,14 +42,14 @@ const Header = () => {
             >
               Home
             </NavHashLink>
-            <NavHashLink
+            {/* <NavHashLink
               className={`nav-anchor ${activeLink === '/#about' ? 'active-link' : ''}`}
               smooth="true"
               to="/#about"
               onClick={() => handleSetActive('/#about')}
             >
               About
-            </NavHashLink>
+            </NavHashLink> */}
             <NavHashLink
               className={`nav-anchor ${activeLink === '/#skills' ? 'active-link' : ''}`}
               smooth="true"
@@ -63,16 +74,40 @@ const Header = () => {
             >
               Blogs
             </NavHashLink>
+            {
+              user?.role === "admin" && <NavHashLink
+                className={`nav-anchor ${activeLink === '/dashboard' ? 'active-link' : ''}`}
+                smooth="true"
+                to="/dashboard"
+                onClick={() => handleSetActive('/dashboard')}
+              >
+                Dashboard
+              </NavHashLink>
+            }
           </Nav>
-          <div>
-            <NavHashLink
-              className="Contact-header-button"
-              smooth="true"
-              to="/#contact"
-            >
-              Contact
-            </NavHashLink>
-          </div>
+          {
+            !user ?
+              <div>
+                <Link
+                  className="Contact-header-button me-2"
+                  to="/login"
+                >
+                  Login
+                </Link>
+                <Link
+                  className="Contact-header-button"
+                  to="/register"
+                >
+                  Signup
+                </Link>
+              </div> :
+              <button
+                onClick={handleLogout}
+                className="Contact-header-button"
+              >
+                Logout
+              </button>
+          }
         </Navbar.Collapse>
       </Container>
     </Navbar>

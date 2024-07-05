@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Pages/Home/Home';
 import { ToastContainer } from 'react-toastify';
@@ -7,10 +7,17 @@ import About from './Pages/Home/About';
 import Skills from './Pages/Home/Skills';
 import Projects from './Pages/Home/Projects';
 import Contact from './Pages/Home/Contact';
+import Login from './Pages/login/Login';
+import Register from './Pages/register/Register';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState } from 'react';
 import Loading from './components/Loading';
+import DashboardLayout from './Pages/dashboard/DashboardLayout';
+import ManageExperience from './Pages/dashboard/ManageExperience';
+import ManageProjects from './Pages/dashboard/ManageProjects';
+import ManageBlogs from './Pages/dashboard/ManageBlogs';
+import ManageSkills from './Pages/dashboard/ManageSkills';
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -44,6 +51,15 @@ function App() {
         <Route path='/skills' element={<Skills />}></Route>
         <Route path='/project' element={<Projects />}></Route>
         <Route path='/contact' element={<Contact />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/register' element={<Register />}></Route>
+        <Route path='/dashboard' element={<DashboardLayout />}>
+          <Route index element={<Navigate to='/dashboard/experience' replace />} />
+          <Route path='experience' element={<ManageExperience />} />
+          <Route path='projects' element={<ManageProjects />} />
+          <Route path='blogs' element={<ManageBlogs />} />
+          <Route path='skills' element={<ManageSkills />} />
+        </Route>
       </Routes>
       <ToastContainer />
     </>
