@@ -9,8 +9,8 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
     <div className={`sidebar bg-dark text-light ${collapsed ? 'collapsed' : ''}`}>
       <div className="sidebar-header d-flex justify-content-between align-items-center p-3">
         <h2 className={`text-center mb-0 ${collapsed ? 'd-none' : ''}`}>
-        <Navbar.Brand as={Link} to="/" className="img-fluid">
-          <img src={Logo} alt="" />
+        <Navbar.Brand as={Link} to="/">
+          <img src={Logo} alt="" className="img-fluid" />
         </Navbar.Brand>
         </h2>
         <button className="btn btn-dark hoverButton" onClick={() => setCollapsed(!collapsed)}>

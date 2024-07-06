@@ -1,6 +1,32 @@
 import React from 'react';
 import "../Styles/dashboard/DashboardInput.css"
+import { Controller, useForm } from 'react-hook-form';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import { useAddExperinceMutation } from '../../redux/features/dashboard/experince/experinceApi';
+import { toast } from 'react-toastify';
 const ManageExperience = () => {
+  const { register, handleSubmit, control, reset } = useForm();
+  const [addExperince, { isLoading }] = useAddExperinceMutation()
+
+  const onSubmit = async (data) => {
+    try {
+      const formattedData = {
+        ...data,
+        startDate: data.startDate.toISOString().split('T')[0],
+        endDate: data.endDate.toISOString().split('T')[0]
+      }
+
+      const res = await addExperince(formattedData)
+      if (res?.data?.success) {
+        reset();
+        toast.success('Experience added successfully!', { duration: 2000 });
+      }
+
+    } catch (error) {
+      toast.error(error?.message, { duration: 2000 });
+    }
+  };
   return (
     <div class="parent-container">
       <div className='dashboard-input-container'>
@@ -22,12 +48,64 @@ const ManageExperience = () => {
                 </div>
               </div>
               <div className="col-md-6">
-                <form role="search">
-                  <input class="input-feild shadow mb-4" name="name" type="search" placeholder="Enter company name" aria-label="Search" />
-                  <input class="input-feild shadow mb-4" type="search" name="user_email" placeholder="Enter position" aria-label="Search" />
-                  <input class="input-feild shadow mb-4" type="search" name="number" placeholder="Enter duration" aria-label="Search" />
-                  <button class="dashboard-button" type="submit">
-                    Submit
+                <form onSubmit={handleSubmit(onSubmit)}>
+                  <input
+                    className="input-feild shadow mb-4"
+                    name="company"
+                    type="text"
+                    placeholder="Enter company name"
+                    {...register('company', { required: true })}
+                    aria-label="Company"
+                  />
+                  <input
+                    className="input-feild shadow mb-4"
+                    name="title"
+                    type="text"
+                    placeholder="Enter position"
+                    {...register('title', { required: true })}
+                    aria-label="Position"
+                  />
+                  <textarea
+                    className="input-feild shadow mb-4"
+                    name="description"
+                    placeholder="Enter description"
+                    {...register('description', { required: true })}
+                    aria-label="Description"
+                  />
+                  <div className='d-flex'>
+                    <Controller
+                      control={control}
+                      name="startDate"
+                      render={({ field }) => (
+                        <DatePicker
+                          className="input-feild shadow mb-4"
+                          placeholderText="Start Date"
+                          selected={field.value}
+                          onChange={field.onChange}
+                          dateFormat="yyyy-MM-dd"
+                          aria-label="Start Date"
+                        />
+                      )}
+                    />
+                    <Controller
+                      control={control}
+                      name="endDate"
+                      render={({ field }) => (
+                        <DatePicker
+                          className="input-feild shadow mb-4 ms-md-2 ms-2"
+                          placeholderText="End Date"
+                          selected={field.value}
+                          onChange={field.onChange}
+                          dateFormat="yyyy-MM-dd"
+                          aria-label="End Date"
+                        />
+                      )}
+                    />
+                  </div>
+                  <button className="dashboard-button" type="submit"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Loading..." : "Submit"}
                   </button>
                 </form>
               </div>
