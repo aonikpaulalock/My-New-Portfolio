@@ -1,36 +1,48 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css'; 
+import 'react-quill/dist/quill.snow.css';
+import "../Styles/dashboard/quil.css"
+import { useAddBlogsMutation } from '../../redux/features/dashboard/blogs/blogsApi';
+import { toast } from 'react-toastify';
 const ManageBlogs = () => {
+  const [addBlogs, { isLoading }] = useAddBlogsMutation()
   const { register, handleSubmit, setValue, reset, watch } = useForm();
   const content = watch('content');
 
   const onSubmit = async (data) => {
+    const toastId = toast.loading("Please wait...");
     const blogData = {
       title: data.title,
       content: data.content,
     };
 
-    // try {
-    //   const response = await fetch('YOUR_API_ENDPOINT', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(blogData),
-    //   });
-
-    //   const result = await response.json();
-    //   if (result.success) {
-    //     alert('Blog added successfully!');
-    //     reset();
-    //   } else {
-    //     alert('Failed to add blog');
-    //   }
-    // } catch (error) {
-    //   alert(error.message);
-    // }
+    try {
+      const res = await addBlogs(blogData);
+      if (res?.data?.success) {
+        toast.update(toastId, {
+          render: res?.data?.message,
+          type: toast.TYPE.SUCCESS,
+          isLoading: false,
+          autoClose: 2000,
+        });
+        reset();
+      } else {
+        toast.update(toastId, {
+          render: "Failed to add blog",
+          type: toast.TYPE.ERROR,
+          isLoading: false,
+          autoClose: 2000,
+        });
+      }
+    } catch (error) {
+      toast.update(toastId, {
+        render: error?.message,
+        type: toast.TYPE.SUCCESS,
+        isLoading: false,
+        autoClose: 2000,
+      });
+    }
   };
 
   const handleEditorChange = (value) => {
@@ -57,19 +69,16 @@ const ManageBlogs = () => {
                 </div>
               </div>
               <div className="col-md-6">
-                {/* <form role="search">
-                <input class="input-feild shadow mb-4" name="name" type="search" placeholder="Enter company name" aria-label="Search" />
-                <input class="input-feild shadow mb-4" type="search" name="user_email" placeholder="Enter position" aria-label="Search" />
-                <input class="input-feild shadow mb-4" type="search" name="number" placeholder="Enter duration" aria-label="Search" />
-                <button class="dashboard-button" type="submit">
-                  Submit
-                </button>
-              </form> */}
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <input className="input-feild shadow mb-4" {...register('title', { required: true })} placeholder="Enter blog title" aria-label="Title" />
-                  <ReactQuill className="shadow mb-4" value={content || ''} onChange={handleEditorChange} />
-                  <button className="dashboard-button" type="submit" disabled={!content}>
-                    Submit
+                  <ReactQuill
+                    className="quill-editor shadow mb-4"
+                    value={content || ''}
+                    onChange={handleEditorChange}
+                    placeholder="Write your blog content here..."
+                  />
+                  <button className="dashboard-button" type="submit" disabled={!content || isLoading}>
+                    {isLoading ? "Loading..." : "Submit"}
                   </button>
                 </form>
               </div>

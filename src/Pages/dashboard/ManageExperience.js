@@ -10,6 +10,7 @@ const ManageExperience = () => {
   const [addExperince, { isLoading }] = useAddExperinceMutation()
 
   const onSubmit = async (data) => {
+    const toastId = toast.loading("Please wait...");
     try {
       const formattedData = {
         ...data,
@@ -19,12 +20,22 @@ const ManageExperience = () => {
 
       const res = await addExperince(formattedData)
       if (res?.data?.success) {
+        toast.update(toastId, {
+          render: res?.data?.message,
+          type: toast.TYPE.SUCCESS,
+          isLoading: false,
+          autoClose: 2000,
+        });
         reset();
-        toast.success('Experience added successfully!', { duration: 2000 });
       }
 
     } catch (error) {
-      toast.error(error?.message, { duration: 2000 });
+      toast.update(toastId, {
+        render: error?.message,
+        type: toast.TYPE.ERROR,
+        isLoading: false,
+        autoClose: 2000,
+      });
     }
   };
   return (

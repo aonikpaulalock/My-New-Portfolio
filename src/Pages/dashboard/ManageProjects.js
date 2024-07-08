@@ -9,6 +9,7 @@ const ManageProjects = () => {
   const [addProject, { isLoading }] = useAddProjectsMutation()
 
   const onSubmit = async (data) => {
+    const toastId = toast.loading("Please wait...");
     try {
       const imageUrl = await uploadImageToImageBB(data.projectImage[0]);
       const projectData = {
@@ -17,14 +18,22 @@ const ManageProjects = () => {
       }
       const res = await addProject(projectData);
       if (res.data.success) {
-        toast.success("Projects added successfully!", {
-          duration: 2000,
+        toast.update(toastId, {
+          render: res?.data?.message,
+          type: toast.TYPE.SUCCESS,
+          isLoading: false,
+          autoClose: 2000,
         });
         reset();
       }
 
     } catch (error) {
-      toast.error(error.message)
+      toast.update(toastId, {
+        render: error?.message,
+        type: toast.TYPE.ERROR,
+        isLoading: false,
+        autoClose: 2000,
+      });
     }
   };
   return (

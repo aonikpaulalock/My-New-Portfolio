@@ -1,5 +1,5 @@
 import React from 'react';
-import loadingGif from '../Asset/Loading/Loading7.gif';
+import loadingGif from '../Asset/Loading/Loading1.gif';
 import "../components/Loading.css"
 const Loading = () => {
   return (

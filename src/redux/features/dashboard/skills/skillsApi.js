@@ -13,7 +13,7 @@ const skillsApi = baseApi.injectEndpoints({
 
     addSkills: builder.mutation({
       query: (data) => ({
-        url: "/skills/create-project",
+        url: "/skills/create-skill",
         method: "POST",
         body: data,
       }),
