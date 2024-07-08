@@ -49,7 +49,7 @@ const ManageBlogs = () => {
     setValue('content', value);
   };
   return (
-    <div class="parent-container">
+    <div class="parent-container p-5">
       <div className='dashboard-input-container'>
         <div className="" id="contact">
           <div className="container"

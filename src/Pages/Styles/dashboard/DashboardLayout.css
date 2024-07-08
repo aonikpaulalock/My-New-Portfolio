@@ -64,34 +64,6 @@
   padding: 10px !important;
 }
 
-/* @media (max-width: 768px) {
-  .sidebar {
-    width: 60px;
-  }
-
-  .sidebar.collapsed {
-    width: 250px;
-  }
-
-  .sidebar li a span {
-    display: none;
-  }
-
-  .sidebar.collapsed li a span {
-    display: inline;
-  }
-
-  .content {
-    margin-left: 60px;
-    width: calc(100% - 60px);
-  }
-
-  .sidebar-collapsed .content {
-    margin-left: 250px;
-    width: calc(100% - 250px);
-  }
-} */
-
 @media (max-width: 500px) {
   .sidebar {
     width: 140px;
