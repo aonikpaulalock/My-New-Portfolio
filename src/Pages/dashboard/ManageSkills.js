@@ -59,6 +59,13 @@ const ManageSkills = () => {
               <div className="col-md-6">
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <input className="input-feild shadow mb-4" {...register('name', { required: true })} placeholder="Enter skill name" aria-label="Name" />
+                  <textarea
+                    className="input-feild shadow mb-4"
+                    name="description"
+                    placeholder="Enter description"
+                    {...register('description', { required: true })}
+                    aria-label="Description"
+                  />
                   <input className="input-feild shadow mb-4" type="file" {...register('skillsImage', { required: true })} aria-label="Skills Image" />
                   <button className="dashboard-button" type="submit"
                     disabled={isLoading}

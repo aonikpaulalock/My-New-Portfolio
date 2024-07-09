@@ -1,80 +1,121 @@
 [
   {
-    "id": 1,
-    "skill": "Html",
-    "img": "https://i.ibb.co/VDRn1qx/html5-2.png"
+    "name": "Typescript",
+    "description": "TypeScript is JavaScript with added syntax for types.",
+    "img": "https://i.ibb.co/XWpSV93/icons8-typescript-96.png"
   },
   {
-    "id": 2,
-    "skill": "Css",
-    "img": "https://i.ibb.co/6BqrSsG/css3.png"
+    "name": "Javascript",
+    "description": "JavaScript is the world's most popular programming language.",
+    "img": "https://i.ibb.co/Zh599N6/icons8-javascript-96.png"
   },
   {
-    "id": 3,
-    "skill": "Bootstrap",
-    "img": "https://i.ibb.co/mHzWCZf/bootstrap.png"
+    "name": "React",
+    "description": "React is a JavaScript library for building user interfaces.",
+    "img": "https://i.ibb.co/xFTsQBh/react.png"
   },
   {
-    "id": 4,
-    "skill": "Tailwind",
-    "img": "https://i.ibb.co/wQZFTwX/tailwind-css.png"
+    "name": "Next Js",
+    "description": "Next.js to create high-quality web applications with the power of React components.",
+    "img": "https://i.ibb.co/KsBYT4f/Next-js-1.png"
   },
   {
-    "id": 5,
-    "skill": "Javascript",
-    "img": "https://i.ibb.co/Yjvdd7L/javascript.png"
+    "name": "Node",
+    "description": "Node.js is an open source server environment.",
+    "img": "https://i.ibb.co/jMVjXSR/icons8-node-js-96.png"
   },
   {
-    "id": 6,
-    "skill": "React",
-    "img": "https://i.ibb.co/rcJBHFC/react.png"
+    "name": "Express",
+    "description": "Fast, unopinionated, minimalist web framework for Node.js",
+    "img": "https://i.ibb.co/k1xCFtL/icons8-express-js-96.png"
   },
   {
-    "id": 7,
-    "skill": "Firebase",
-    "img": "https://i.ibb.co/WH31c1m/firebase.png"
+    "name": "MongoDB",
+    "description": "MongoDB is a document database. It stores data in a type of JSON format called BSON.",
+    "img": "https://i.ibb.co/GHfnL0V/icons8-mongodb-96.png"
   },
   {
-    "id": 8,
-    "skill": "Node",
-    "img": "https://i.ibb.co/D7Z8QKJ/node-js.png"
+    "name": "Postgres",
+    "description": "PostgreSQL is an advanced relational database system.",
+    "img": "https://i.ibb.co/dBKgbht/icons8-postgresql-92.png"
   },
   {
-    "id": 9,
-    "skill": "Express",
-    "img": "https://i.ibb.co/S0Sqqj6/express-1.png"
+    "name": "Prisma",
+    "description": "Prisma make it easy to build and scale data-driven applications.",
+    "img": "https://i.ibb.co/y5H0L2T/icons8-prisma-orm-92.png"
   },
   {
-    "id": 10,
-    "skill": "MongoDb",
-    "img": "https://i.ibb.co/TmCCvM8/mongodb.png"
+    "name": "Redux",
+    "description": "Redux is a predictable state container for JavaScript apps.",
+    "img": "https://i.ibb.co/yXKZ3R2/icons8-redux-96.png"
   },
   {
-    "id": 11,
-    "skill": "Sass",
-    "img": "https://i.ibb.co/Nrq9Vwh/sass.png"
+    "name": "Mongoose",
+    "description": "mongoose elegant mongodb object modeling for node.js",
+    "img": "https://i.ibb.co/tXYxhBK/icons8-mongoose-96.png"
   },
   {
-    "id": 12,
-    "skill": "Next Js",
-    "img": "https://i.ibb.co/j3116fm/NextJs.png"
+    "name": "Html",
+    "description": "HTML is the standard markup language for Web pages.",
+    "img": "https://i.ibb.co/wpZ0cjv/icons8-html-96.png"
   },
   {
-    "id": 13,
-    "skill": "Typescript",
-    "img": "https://i.ibb.co/3d6H20X/typescript.png"
+    "name": "Css",
+    "description": "CSS is the language we use to style an HTML document.",
+    "img": "https://i.ibb.co/r3Fn2fg/icons8-css-96.png"
   },
   {
-    "id": 13,
-    "skill": "Postgres",
-    "img": "https://i.ibb.co/XSJ01Ym/posgres.png"
+    "name": "Bootstrap",
+    "description": "Bootstrap is the world's most famous free CSS framework.",
+    "img": "https://i.ibb.co/tL2cPGL/icons8-bootstrap-96.png"
   },
   {
-    "id": 14,
-    "skill": "Prisma",
-    "img": "https://i.ibb.co/kQmCjLH/prisma-3-1.png"
+    "name": "Tailwind",
+    "description": "Tailwind CSS works by scanning all of your HTML files.",
+    "img": "https://i.ibb.co/6WR5JMv/icons8-tailwind-css-96.png"
+  },
+  {
+    "name": "Firebase",
+    "description": "Firebase is a set of backend cloud computing services.",
+    "img": "https://i.ibb.co/m59vc37/icons8-google-firebase-console-96.png"
+  },
+  {
+    "name": "Sass",
+    "description": "Sass is a CSS pre-processor its reduces repetition of CSS.",
+    "img": "https://i.ibb.co/dWXRZTF/icons8-sass-96.png"
   }
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

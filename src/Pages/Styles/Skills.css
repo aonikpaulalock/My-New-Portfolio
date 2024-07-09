@@ -3,6 +3,20 @@
   padding: 6rem;
 }
 
+.skill-card {
+  display: inline-block;
+  margin-right: 20px;
+  box-sizing: border-box;
+}
+
+.skills-card-1 {
+  padding: 3rem 3rem;
+  background: #22282F;
+  border-radius: 30px;
+  cursor: pointer;
+  max-width: 300px
+}
+
 .skils-line {
   position: relative;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import "../../Pages/Styles/Projects.css"
 import { Icon } from '@iconify/react';
-import { Link } from 'react-router-dom';
 import { useGetAllProjectsQuery } from '../../redux/features/dashboard/projects/projectApi';
 import Loading from '../../components/Loading';
 

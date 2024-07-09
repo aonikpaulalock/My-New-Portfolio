@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Marquee from 'react-fast-marquee';
-import "../../Pages/Styles/Skills.css"
+import "../../Pages/Styles/Skills.css";
+import { useGetAllSkillsQuery } from '../../redux/features/dashboard/skills/skillsApi';
+
 const Skills = () => {
-  const [skills, setSkills] = useState([]);
-  useEffect(() => {
-    fetch("Skills.json")
-      .then(res => res.json())
-      .then(data => {
-        setSkills(data)
-      })
-  }, [])
+  const { data: skills, isLoading } = useGetAllSkillsQuery();
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
   return (
-    <div className="skills-container" id="skills"
-    >
+    <div className="skills-container" id="skills">
       <div className="container mt-5"
         data-aos="fade-up"
         data-aos-offset="200"
@@ -24,33 +23,28 @@ const Skills = () => {
           <h4 className="about-main-head">MY SKILLS</h4>
         </div>
         <h3 className="skills-main-heading mb-4">My extensive list of skills</h3>
-        <div className="row">
-          <div className="skillsContainer">
-            <div className="skill--scroll">
-              <Marquee
-                gradient={false}
-
-                pauseOnHover={true}
-                pauseOnClick={true}
-
-                play={true}
-                direction="left"
-              >
-                {skills.map((skill) => (
-                  <div className="skill--box" key={skill.id}>
-                    <div className="skils-image">
-                      <img src={skill.img} alt={skill} className="img-thumnail shadow rounded-lg p-5" />
-                    </div>
-                    <h3 className='title-skills'>
-                      {skill.skill}
-                    </h3>
-                    <h1 className="skill-rate"> </h1>
-                  </div>
-                ))}
-              </Marquee>
+        <Marquee
+          gradient={false}
+          pauseOnHover={true}
+          pauseOnClick={true}
+          play={true}
+          spreed={10}
+          direction="left"
+          className='skills-marquee'
+        >
+          {skills?.data?.map((skill) => (
+            <div className="skill-card" key={skill._id}>
+              <div className="skills-card-1">
+                <div className="services-image">
+                  <img src={skill.img} alt={skill.name} className="img-fluid p-3 rounded-full" />
+                </div>
+                <h2 className="services-main-heading">{skill?.name}</h2>
+                <p className="services-sub-heading">{skill.description}</p>
+                <h1 className="skill-rate"> </h1>
+              </div>
             </div>
-          </div>
-        </div>
+          ))}
+        </Marquee>
       </div>
     </div>
   );
