@@ -1,10 +1,14 @@
 import React from 'react';
 import "../Styles/Experience.css"
+import { useGetAllExperinceQuery } from '../../redux/features/dashboard/experince/experinceApi';
+import moment from "moment";
+import Loading from '../../components/Loading';
+import ExperinceCard from '../../components/ExperinceCard';
 const Experience = () => {
+  const { data: experinces, isLoading } = useGetAllExperinceQuery();
   return (
     <div className='experince-container'>
       <div className="container mt-5">
-
         <div className="row">
           <div className="experience-heading">
             <h4 className="experience-title">EDUCATION & EXPERINCE</h4>
@@ -35,24 +39,10 @@ const Experience = () => {
           </div>
           <div className="col-lg-6">
             <h2 className="mb-4 section-title">EXPERIENCE</h2>
-            <div className="timeline-item mb-4">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <h5 className="timeline-title">React Js  Developer (Intern)</h5>
-                <p className="timeline-duration">2022 - 2023</p>
-                <h6 className="timeline-subtitle">XcitEducation Worldwide, India</h6>
-                <p className='timeline-des'>As a developer at XcitEducation Worldwide since 2023, I have contributed to diverse projects, leveraging my skills in both frontend and backend development. Collaborating with talented teams, I have tackled challenges, implemented innovative solutions, and continuously honed my expertise to deliver high-quality, scalable software solutions</p>
-              </div>
-            </div>
-            <div className="timeline-item mb-4">
-              <div className="timeline-dot"></div>
-              <div className="timeline-content">
-                <h5 className="timeline-title">Next Level Web Development</h5>
-                <p className="timeline-duration">2022 - 2023</p>
-                <h6 className="timeline-subtitle">Programming Hero</h6>
-                <p className='timeline-des'>I completed the Next Level Web Development Course from Programming Hero, guided by interactive lessons and real-world projects, solidifying my expertise in web development and preparing me for professional challenges.</p>
-              </div>
-            </div>
+            {
+              isLoading ? <Loading /> :
+                experinces?.data?.map((experince) => <ExperinceCard key={experince?._id} experince={experince} />)
+            }
           </div>
         </div>
       </div>
