@@ -5,6 +5,7 @@ import 'react-quill/dist/quill.snow.css';
 import "../Styles/dashboard/quil.css"
 import { useAddBlogsMutation } from '../../redux/features/dashboard/blogs/blogsApi';
 import { toast } from 'react-toastify';
+import { htmlToText } from 'html-to-text';
 const ManageBlogs = () => {
   const [addBlogs, { isLoading }] = useAddBlogsMutation()
   const { register, handleSubmit, setValue, reset, watch } = useForm();
@@ -12,9 +13,10 @@ const ManageBlogs = () => {
 
   const onSubmit = async (data) => {
     const toastId = toast.loading("Please wait...");
+    const plainTextContent = htmlToText(data.content);
     const blogData = {
       title: data.title,
-      content: data.content,
+      content: plainTextContent,
     };
 
     try {

@@ -2,8 +2,10 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 import "../../Pages/Styles/Skills.css";
 import { useGetAllSkillsQuery } from '../../redux/features/dashboard/skills/skillsApi';
+import { useNavigate } from 'react-router-dom';
 
 const Skills = () => {
+  const navigate = useNavigate()
   const { data: skills, isLoading } = useGetAllSkillsQuery();
 
   if (isLoading) {
@@ -19,10 +21,23 @@ const Skills = () => {
         data-aos-easing="ease-in-out"
         data-aos-delay="300"
       >
-        <div className="after-line skills-line">
-          <h4 className="about-main-head">MY SKILLS</h4>
+        <div className='d-md-flex justify-content-md-between align-align-items-md-center'>
+          <div>
+            <div className="after-line skills-line">
+              <h4 className="about-main-head">MY SKILLS</h4>
+            </div>
+            <h3 className="skills-main-heading mb-4">My extensive list of skills</h3>
+          </div>
+          <button className="resume-button d-flex justify-align-content-center align-items-center"
+            onClick={() => navigate("/all-skills")}
+          >All Skills
+            {/* <a
+                  href=""
+                  className="link-work">
+                <Icon icon="bi:download" className="download-icon" 
+                  />Download Resume</a> */}
+          </button>
         </div>
-        <h3 className="skills-main-heading mb-4">My extensive list of skills</h3>
         <Marquee
           gradient={false}
           pauseOnHover={true}

@@ -16,7 +16,18 @@
   cursor: pointer;
   max-width: 300px
 }
+.all-skills-card-1{
+  padding: 4rem 2rem;
+  background: #22282F;
+  border-radius: 15px;
+  cursor: pointer;
+}
 
+.all-skill-card {
+  display: inline-block;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
 .skils-line {
   position: relative;
 }

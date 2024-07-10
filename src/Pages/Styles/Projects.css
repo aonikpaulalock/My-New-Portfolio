@@ -3,6 +3,11 @@
   padding: 10rem 0 ;
 }
 
+.all-projects-container{
+  background: #1B1F24;
+  padding: 7rem 0 ;
+}
+
 .project-1 {
   background: #2D343F;
   border-radius: 30px;
@@ -65,5 +70,8 @@
   .projects-container {
     background: #22282F;
     padding: 10rem 4rem ;
+  }
+  .all-projects-container{
+    padding: 5rem 3rem ;
   }
 }

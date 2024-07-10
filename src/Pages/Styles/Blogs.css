@@ -2,6 +2,23 @@
   background: #22282F;
   padding: 12rem 3rem;
 }
+
+.blogs-card {
+  display: inline-block;
+  margin-right: 20px;
+  box-sizing: border-box;
+}
+
+.blogs-card-1 {
+  padding: 3rem 3rem;
+  background: #272d33;
+  border-radius: 30px;
+  cursor: pointer;
+  max-width: 350px;
+  min-height:350px
+}
+
+
 @media screen and (max-width:600px) {
   .Blogs-container {
     padding: 10rem 4rem;

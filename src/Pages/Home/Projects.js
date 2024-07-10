@@ -3,17 +3,19 @@ import "../../Pages/Styles/Projects.css"
 import { Icon } from '@iconify/react';
 import { useGetAllProjectsQuery } from '../../redux/features/dashboard/projects/projectApi';
 import Loading from '../../components/Loading';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
+  const navigate = useNavigate();
   const { data: projects, isLoading } = useGetAllProjectsQuery();
 
   // Check if data is still loading
   if (isLoading) {
-    return <Loading/>;
+    return <Loading />;
   }
 
   // Ensure we have data to display
-  if (!projects || projects.length === 0) {
+  if (!projects?.data || projects?.data?.length === 0) {
     return <div>No projects found.</div>;
   }
 
@@ -125,6 +127,12 @@ const Projects = () => {
                 </div>
               ))}
             </div>
+          </div>
+          <div className='d-md-flex justify-content-md-center align-items-md-center'>
+            <button className="resume-button w-lg-50 my-lg-4 my-0 "
+              onClick={() => navigate("/all-projects")}
+            >All projects
+            </button>
           </div>
         </div>
       </div>
