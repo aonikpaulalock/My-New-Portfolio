@@ -17,10 +17,8 @@ const Contact = () => {
     <div className="contact-container" id="contact">
       <div className="container"
         data-aos="fade-up"
-        data-aos-offset="200"
-        data-aos-duration="3000"
-        data-aos-easing="ease-in-out"
-        data-aos-delay="300"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
       >
         <div className="row">
           <div className="col-md-6 mb-sm-0 mb-5">

@@ -21,6 +21,7 @@ import ManageSkills from './Pages/dashboard/ManageSkills';
 import AllProjects from './Pages/Home/AllProjects';
 import AllSkills from './Pages/Home/AllSkills';
 import AllBlogs from './Pages/Home/AllBlogs';
+import ProtectedRoute from './utils/ProtectedRoute';
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -53,7 +54,11 @@ function App() {
         <Route path='/about' element={<About />}></Route>
         <Route path='/skills' element={<Skills />}></Route>
         <Route path='/project' element={<Projects />}></Route>
-        <Route path='/all-projects' element={<AllProjects />}></Route>
+        <Route path='/all-projects' element={
+          <ProtectedRoute>
+            <AllProjects />
+          </ProtectedRoute>
+        }></Route>
         <Route path='/all-skills' element={<AllSkills />}></Route>
         <Route path='/all-blogs' element={<AllBlogs />}></Route>
         <Route path='/contact' element={<Contact />}></Route>

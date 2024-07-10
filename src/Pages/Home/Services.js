@@ -6,11 +6,9 @@ const Services = () => {
     <div className="services-container" id="services">
       <div className="container">
         <div className="col-md-6"
-          data-aos="fade-right"
-          data-aos-offset="300"
+          data-aos="fade-up"
           data-aos-easing="linear"
-          data-aos-duration="2000"
-
+          data-aos-duration="1500"
         >
           <div className="after-line skills-line">
             <h4 className="about-main-head">SERVICES</h4>
@@ -18,10 +16,9 @@ const Services = () => {
           <h3 className="skills-main-heading py-4">Take a look at the latest projects I've done</h3>
         </div>
         <div className="row"
-          data-aos="fade-left"
-          data-aos-offset="300"
+          data-aos="fade-up"
           data-aos-easing="linear"
-          data-aos-duration="3000"
+          data-aos-duration="1500"
         >
           <div className="col-lg-4 col-md-6">
             <div className="services-card-1">

@@ -1,3 +1,4 @@
+import Loading from "../../components/Loading";
 import { useGetAllBlogsQuery } from "../../redux/features/dashboard/blogs/blogsApi";
 import Header from "../Shared/Header";
 
@@ -23,6 +24,7 @@ const AllBlogs = () => {
               </div>
             </div>
             {
+              isLoading ? <Loading /> :
               blogs?.data?.map(blog =>
                 <div className="col-lg-6" key={blog?._id}>
                   <div className="all-skill-card" key={blog._id}>

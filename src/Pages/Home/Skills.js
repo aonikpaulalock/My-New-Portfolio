@@ -3,14 +3,11 @@ import Marquee from 'react-fast-marquee';
 import "../../Pages/Styles/Skills.css";
 import { useGetAllSkillsQuery } from '../../redux/features/dashboard/skills/skillsApi';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../../components/Loading';
 
 const Skills = () => {
   const navigate = useNavigate()
   const { data: skills, isLoading } = useGetAllSkillsQuery();
-
-  if (isLoading) {
-    return <p>Loading...</p>;
-  }
 
   return (
     <div className="skills-container" id="skills">
@@ -31,11 +28,6 @@ const Skills = () => {
           <button className="resume-button d-flex justify-align-content-center align-items-center"
             onClick={() => navigate("/all-skills")}
           >All Skills
-            {/* <a
-                  href=""
-                  className="link-work">
-                <Icon icon="bi:download" className="download-icon" 
-                  />Download Resume</a> */}
           </button>
         </div>
         <Marquee
@@ -47,18 +39,20 @@ const Skills = () => {
           direction="left"
           className='skills-marquee'
         >
-          {skills?.data?.map((skill) => (
-            <div className="skill-card" key={skill._id}>
-              <div className="skills-card-1">
-                <div className="services-image">
-                  <img src={skill.img} alt={skill.name} className="img-fluid p-3 rounded-full" />
+          {
+            isLoading ? <Loading /> :
+              skills?.data?.map((skill) => (
+                <div className="skill-card" key={skill._id}>
+                  <div className="skills-card-1">
+                    <div className="services-image">
+                      <img src={skill.img} alt={skill.name} className="img-fluid p-3 rounded-full" />
+                    </div>
+                    <h2 className="services-main-heading">{skill?.name}</h2>
+                    <p className="services-sub-heading">{skill.description}</p>
+                    <h1 className="skill-rate"> </h1>
+                  </div>
                 </div>
-                <h2 className="services-main-heading">{skill?.name}</h2>
-                <p className="services-sub-heading">{skill.description}</p>
-                <h1 className="skill-rate"> </h1>
-              </div>
-            </div>
-          ))}
+              ))}
         </Marquee>
       </div>
     </div>

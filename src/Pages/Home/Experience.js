@@ -1,14 +1,17 @@
 import React from 'react';
 import "../Styles/Experience.css"
 import { useGetAllExperinceQuery } from '../../redux/features/dashboard/experince/experinceApi';
-import moment from "moment";
 import Loading from '../../components/Loading';
 import ExperinceCard from '../../components/ExperinceCard';
 const Experience = () => {
   const { data: experinces, isLoading } = useGetAllExperinceQuery();
   return (
     <div className='experince-container'>
-      <div className="container mt-5">
+      <div className="container mt-5"
+        data-aos="fade-up"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
+      >
         <div className="row">
           <div className="experience-heading">
             <h4 className="experience-title">EDUCATION & EXPERINCE</h4>

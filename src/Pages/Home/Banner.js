@@ -30,11 +30,7 @@ const Banner = () => {
               </div>
               <Typed
                 strings={[
-                  'Junior Frontend Developer',
-                  'React Developer',
-                  'Javascript Developer',
                   'Full Stack Developer',
-                  'MERN Stack Developer'
                 ]}
                 typeSpeed={60}
                 backSpeed={50}

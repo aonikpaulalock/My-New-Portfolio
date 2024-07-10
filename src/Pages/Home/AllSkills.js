@@ -1,3 +1,4 @@
+import Loading from "../../components/Loading";
 import { useGetAllSkillsQuery } from "../../redux/features/dashboard/skills/skillsApi";
 import Header from "../Shared/Header";
 
@@ -23,20 +24,21 @@ const AllSkills = () => {
               </div>
             </div>
             {
-              skills?.data?.map(skill =>
-                <div className="col-lg-4" key={skill?._id}>
-                  <div className="all-skill-card" key={skill._id}>
-                    <div className="all-skills-card-1">
-                      <div className="services-image">
-                        <img src={skill.img} alt={skill.name} className="img-fluid p-3 rounded-full" />
+              isLoading ? <Loading /> :
+                skills?.data?.map(skill =>
+                  <div className="col-lg-4" key={skill?._id}>
+                    <div className="all-skill-card" key={skill._id}>
+                      <div className="all-skills-card-1">
+                        <div className="services-image">
+                          <img src={skill.img} alt={skill.name} className="img-fluid p-3 rounded-full" />
+                        </div>
+                        <h2 className="services-main-heading">{skill?.name}</h2>
+                        <p className="services-sub-heading">{skill.description}</p>
+                        <h1 className="skill-rate"> </h1>
                       </div>
-                      <h2 className="services-main-heading">{skill?.name}</h2>
-                      <p className="services-sub-heading">{skill.description}</p>
-                      <h1 className="skill-rate"> </h1>
                     </div>
                   </div>
-                </div>
-              )
+                )
             }
           </div>
         </div>
