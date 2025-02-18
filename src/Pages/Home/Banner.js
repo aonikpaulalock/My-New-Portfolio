@@ -5,7 +5,7 @@ import shape from "../../Asset/Banner/Vector 1.png"
 import Typed from 'react-typed';
 import { Icon } from '@iconify/react';
 import Header from '../Shared/Header';
-const resumeUrl = 'https://drive.google.com/uc?export=download&id=16gF5wUT1y-0f1K1P3-tGTgJmCUiULBy1';
+const resumeUrl = 'https://drive.google.com/file/d/1WKkawYPQCOqS36WoTWrWWwJprZFkvRYP/view?usp=sharing';
 const Banner = () => {
   return (
     <div
